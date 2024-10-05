@@ -1,6 +1,7 @@
 ---
-title: Model
-parent: Deep Decoder
+layout: default
+title: "Model"
+permalink: /deep-decoder/model/
 ---
 
 # Model
