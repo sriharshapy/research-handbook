@@ -6,3 +6,11 @@ url: https://sriharshapy.github.io/research-handbook
 
 aux_links:
   Template Repository: https://sriharshapy.github.io/research-handbook
+
+
+nav:
+  - Home: /
+  - About: /about
+  - Docs:
+      - deep decoder: /docs/deep-decoder/index.md
+      
