@@ -2,6 +2,7 @@
 layout: default
 title: "Deep Decoder"
 permalink: /deep-decoder/
+nav_order: 2
 ---
 
 
