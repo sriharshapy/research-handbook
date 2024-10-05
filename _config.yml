@@ -17,7 +17,7 @@ just_the_docs:
     - title: "Home"
       url: /
     - title: "Deep Decoder"
-      url: /deep-decoder/
+      url: /
       children:
         - title: "Model"
-          url: /deep-decoder/model/
+          url: /
