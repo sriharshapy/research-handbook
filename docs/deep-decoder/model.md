@@ -1,7 +1,6 @@
 ---
 title: Model
 parent: Deep Decoder
-nav_order: 1
 ---
 
 # Model
