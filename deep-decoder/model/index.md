@@ -3,6 +3,7 @@ layout: default
 title: "Model"
 parent: Deep Decoder
 permalink: /deep-decoder/model/
+nav_order: 3
 ---
 
 # Model
