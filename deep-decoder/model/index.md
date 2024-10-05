@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Model"
+parent: Deep Decoder
 permalink: /deep-decoder/model/
 ---
 
