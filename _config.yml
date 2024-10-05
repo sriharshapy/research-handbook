@@ -1,22 +1,23 @@
-# Site settings
-title: "Your Site Title"
-description: "A description of your site"
+title: Research Handbook
+description: A starter template for a Jeykll site using the Just the Docs theme!
+theme: just-the-docs
+
+url: https://sriharshapy.github.io/research-handbook
+
+aux_links:
+  Template Repository: https://sriharshapy.github.io/research-handbook
+
+remote_theme: pmarsceill/just-the-docs
 
 # Navigation configuration
 just_the_docs:
-  # Enable or disable the search bar
   search_enabled: true
 
-  # Define the navigation structure
   nav:
     - title: "Home"
       url: /
     - title: "Deep Decoder"
       url: /deep-decoder/
       children:
-        - title: "Subsection 1.1"
-          url: /section1/subsection1/
-        - title: "Subsection 1.2"
-          url: /section1/subsection2/
-    - title: "Section 2"
-      url: /section2/
+        - title: "Model"
+          url: /deep-decoder/model/
