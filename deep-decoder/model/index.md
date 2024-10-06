@@ -20,6 +20,8 @@ nav_order: 3
 
 This configuration generated using [nnsight](https://nnsight.net/) library.
 
+<div style="background-color: rgb(50, 50, 50);">
+
 ```
 layer :  Sequential(
   (0): ReflectionPad2d((0, 0, 0, 0))
