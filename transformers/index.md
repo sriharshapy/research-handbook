@@ -36,4 +36,4 @@ MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_o
 
 #### Scaled dot product attention
 
-![Alt text](/assets/images/transformers/Scaled_Dot_Product.png)
+![Alt text](https://github.com/sriharshapy/research-handbook/raw/main/assets/images/transformers/Scaled_Dot_Product.png)
