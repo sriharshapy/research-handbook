@@ -36,6 +36,6 @@ MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_o
 
 #### Scaled dot product attention
 
-$$
-\frac{a}{b} = \frac{c}{d}
-$$
+<div style="text-align: center;">
+  <img src="/assets/images/transformers/Scaled_Dot_Product.png" alt="Placeholder Image" width="300"/>
+</div>
