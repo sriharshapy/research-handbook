@@ -18,7 +18,7 @@ nav_order: 3
 
 ## Model input and output shapes
 
-This configuration generated using [nnsight](https://nnsight.net/) library.
+This configuration is generated using [nnsight](https://nnsight.net/) library. 
 
 
 ```

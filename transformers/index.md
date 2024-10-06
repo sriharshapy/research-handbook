@@ -15,7 +15,21 @@ nav_order: 4
 {:toc}
 
 
-## Abstracts Terms
+## Glossary
 
+The following are some of the important concepts of transformers. They also
+have simple examples to understand them in detail.
 
 ### Multi-Head Attention
+
+Instead of using a single set of query (Q), key (K), and value (V) matrices,
+multi-head attention splits these into multiple sets. Each set, or "head,"
+processes the input independently, allowing the model to focus on different
+parts of the sequence. Each head performs its own attention calculation,
+capturing various details such as syntax, semantics, or long-term dependencies.
+The outputs from all heads are concatenated and linearly transformed to produce
+the final output.
+
+$$MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_{O}$$
+
+#### Scaled dot product attention
