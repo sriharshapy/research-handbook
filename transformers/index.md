@@ -36,4 +36,6 @@ MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_o
 
 #### Scaled dot product attention
 
-\(x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}\)
+$\frac{x+y}{y}$
+
+$$\frac{x+y}{y}$$
