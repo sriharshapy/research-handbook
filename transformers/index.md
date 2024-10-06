@@ -30,6 +30,8 @@ capturing various details such as syntax, semantics, or long-term dependencies.
 The outputs from all heads are concatenated and linearly transformed to produce
 the final output.
 
+```LaTeX
 $$MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_{O}$$
+```
 
 #### Scaled dot product attention
