@@ -31,7 +31,9 @@ The outputs from all heads are concatenated and linearly transformed to produce
 the final output.
 
 ```LaTeX
-$$MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_{O}$$
+MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_o
 ```
 
 #### Scaled dot product attention
+
+$x + y$
