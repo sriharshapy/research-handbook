@@ -20,7 +20,6 @@ nav_order: 3
 
 This configuration generated using [nnsight](https://nnsight.net/) library.
 
-<div style="background-color: rgb(50, 50, 50);">
 
 ```
 layer :  Sequential(
@@ -107,7 +106,6 @@ layer :  Sigmoid()
 input shape : torch.Size([1, 3, 1024, 1024])
 output shape : torch.Size([1, 3, 1024, 1024])
 ```
-
 ### Code for the above
 
 Assuming that you are executing in google colab
