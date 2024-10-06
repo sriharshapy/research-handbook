@@ -36,6 +36,6 @@ MultiHead(Q,K,V)=Concat(head-1,…,head-h)⋅W_o
 
 #### Scaled dot product attention
 
-$\frac{x+y}{y}$
-
-$$\frac{x+y}{y}$$
+$$
+\frac{a}{b} = \frac{c}{d}
+$$
