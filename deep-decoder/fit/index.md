@@ -56,3 +56,8 @@ def fit(net,
         weight_decay=0,
        ):
 ```
+
+```net``` : This is the decoder model instance which must be initialized before
+hand and pass into the fit function.
+
+```img_noisy_var``` :  
