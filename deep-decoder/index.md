@@ -11,4 +11,5 @@ More details will be updated in this page later.
 
 ## Deep Decoder resources:
 [Github repo](https://github.com/reinhardh/supplement_deep_decoder)
+
 [Paper](https://arxiv.org/abs/1810.03982)
