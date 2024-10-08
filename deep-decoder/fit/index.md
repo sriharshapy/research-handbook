@@ -84,11 +84,11 @@ def fit(net,
        ):
 ```
 
-#### `net` :
+`net` :
 This is the decoder model instance which must be initialized before
 hand and pass into the fit function.
 
-#### `img_noisy_var` :  
+`img_noisy_var` :  
 
 ```python
 def get_noisy_img(sig=30,noise_same = False):
@@ -109,4 +109,4 @@ adding noise to the input image in the case of denoising experiment. It contains
 data as the `img_noisy_np` which is the other output of `get_noisy_img(args...)`
 but with extra added dimension or `[]` wrapped around the data and also `required_grad=True`.
 
-#### `num_channels` :
+`num_channels` :
