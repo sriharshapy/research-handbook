@@ -61,8 +61,6 @@ around the tensor data. We will use  `unsqueeze(0)` which has the same functiona
 ## fit
 Exploring each param of the fit function.
 
-### Denoising
-
 ```python
 def fit(net,
         img_noisy_var,
@@ -164,4 +162,4 @@ than its predecessor.
 
 `weight_decay` : This is the weight decay param that is passed into the optimizer.
 It will be passed into only `adam` and `SDG` optimizers. In other cases it will
-be ignored. 
+be ignored.
