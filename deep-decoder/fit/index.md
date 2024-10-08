@@ -116,11 +116,52 @@ in the scenarios where it is not explicitly pass as an arg. In case of Denoising
 experiment is will not be passed.
 
 `img_clean_var` : This contains the data of the original image without any noise.
-The data is wrapped in a tensor with `required_grad=True` and an added extra
+The data is wrapped in a tensor with `required_grad=True` and has an extra
 dimension because it is wrapped with `[]`.
 
 `num_iter` : This hold the number of iterations the forward and backward passes
 occur during the execution of the fit model.
 
 `LR`: This the learning rate that is fed into the optimizer.
- 
+
+`OPTIMIZER` : This will set the kind of optimizer that the fit method will
+employ during the course of the iterations defined by `num_iter`. The fit method
+will accept only these three types of optimizers `SGD`, `adam`, `LBFGS`.
+
+`opt_input` : This is a flag, when set to true will add the tensor `net_input`
+into the list of params along side of decoder params that are set to optimizer
+over the several iterations defined by `num_iter`.
+
+`reg_noise_std` : This hold the standard deviation which is multiplied to a noise
+generated using a normal distribution with `mean=0` and `std=1`. This noise Tensor
+has the same shape as the `net_input`. In every iteration this noise multiplied with
+`reg_noise_std` is added to the `net_input`.
+
+`reg_noise_decayevery` : This is the frequency at which the `reg_noise_std` is
+decayed.
+
+`mask_var` : A mask that will be applied to output and the target data to mask
+out parts of the image or data. This is optional.
+
+`apply_f` : This holds a function that will be applied to the output right before
+computing the loss.
+
+`lr_decay_epoch` : This contributes to the decay of learning rate. The decay of
+learning rate is exponential in nature. The rate at which the decay must happen can
+be tuned using this param. The param is passed into method `exp_lr_scheduler(args..)`
+from fit.
+
+`net_input` : This holds the input to the decoder model. This tensor can be
+passed as an argument into the fit method. In case its not passed, the method
+creates one with same shape as the expected input to the decoder model. The data
+will be sampled from a uniform distribution between 0 to 1.
+
+`net_input_gen` : This param is not used anywhere in the fit method. Ignore it.
+
+`find_best` : This is a flag, when set to true will look out for the best model
+during the iteration. When the loss is decreased by 0.5 % it is considered better
+than its predecessor.
+
+`weight_decay` : This is the weight decay param that is passed into the optimizer.
+It will be passed into only `adam` and `SDG` optimizers. In other cases it will
+be ignored. 
