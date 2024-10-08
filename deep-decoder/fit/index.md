@@ -33,6 +33,32 @@ def exp_lr_scheduler(optimizer, epoch, init_lr=0.001, lr_decay_epoch=500):
     return optimizer
 ```
 
+## helper methods
+
+```python
+def np_to_tensor(img_np):
+    '''Converts image in numpy.array to torch.Tensor.
+
+    From C x W x H [0..1] to  C x W x H [0..1]
+    '''
+    return torch.from_numpy(img_np)
+
+def np_to_var(img_np, dtype=torch.float32, device='cuda'):
+    '''Converts image in numpy.array to torch.Tensor with an additional batch dimension.
+
+    From C x W x H [0..1] to  1 x C x W x H [0..1]
+    '''
+    # return Variable(np_to_tensor(img_np)[None, :])
+    tensor = np_to_tensor(img_np).to(dtype=dtype, device=device)
+    return tensor.unsqueeze(0)
+```
+
+The original code has the line `return Variable(np_to_tensor(img_np)[None, :])`.
+Here `Variable` is depreciate and any tensor we create will be by default automatically
+differentiable. The `[None, :]` is used to create an extra dimension or wrap `[]`
+around the tensor data. We will use  `unsqueeze(0)` which has the same functionality.
+
+
 ## fit
 Exploring each param of the fit function.
 
