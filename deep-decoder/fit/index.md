@@ -57,7 +57,7 @@ def fit(net,
        ):
 ```
 
-```net``` : This is the decoder model instance which must be initialized before
+**net** : This is the decoder model instance which must be initialized before
 hand and pass into the fit function.
 
-```img_noisy_var``` :  
+**img_noisy_var** :  
