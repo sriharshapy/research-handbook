@@ -84,7 +84,29 @@ def fit(net,
        ):
 ```
 
-`net` : This is the decoder model instance which must be initialized before
+#### `net` :
+This is the decoder model instance which must be initialized before
 hand and pass into the fit function.
 
-`img_noisy_var` :  
+#### `img_noisy_var` :  
+
+```python
+def get_noisy_img(sig=30,noise_same = False):
+    sigma = sig/255.
+    if noise_same: # add the same noise in each channel
+        noise = np.random.normal(scale=sigma, size=img_np.shape[1:])
+        noise = np.array( [noise]*img_np.shape[0] )
+    else: # add independent noise in each channel
+        noise = np.random.normal(scale=sigma, size=img_np.shape)
+
+    img_noisy_np = np.clip( img_np + noise , 0, 1).astype(np.float32)
+    img_noisy_var = np_to_var(img_noisy_np).type(dtype)
+    return img_noisy_np, img_noisy_var
+```
+
+The `img_noisy_var` is a tensor which contains an image which is created by
+adding noise to the input image in the case of denoising experiment. It contains the same
+data as the `img_noisy_np` which is the other output of `get_noisy_img(args...)`
+but with extra added dimension or `[]` wrapped around the data and also `required_grad=True`.
+
+#### `num_channels` :
