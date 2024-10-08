@@ -54,13 +54,14 @@ def np_to_var(img_np, dtype=torch.float32, device='cuda'):
 ```
 
 The original code has the line `return Variable(np_to_tensor(img_np)[None, :])`.
-Here `Variable` is depreciate and any tensor we create will be by default automatically
-differentiable. The `[None, :]` is used to create an extra dimension or wrap `[]`
+We remove `Variable` because it is depreciate but in the latest torch versions any tensor we create will be by default automatically differentiable. The `[None, :]` is used to create an extra dimension or wrap `[]`
 around the tensor data. We will use  `unsqueeze(0)` which has the same functionality.
 
 
 ## fit
 Exploring each param of the fit function.
+
+### Denoising
 
 ```python
 def fit(net,
