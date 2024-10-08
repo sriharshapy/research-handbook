@@ -84,7 +84,7 @@ def fit(net,
 
 `net` :
 This is the decoder model instance which must be initialized before
-hand and pass into the fit function.
+hand and passed into the fit function.
 
 `img_noisy_var` :  
 
@@ -145,7 +145,7 @@ out parts of the image or data. This is optional.
 computing the loss.
 
 `lr_decay_epoch` : This contributes to the decay of learning rate. The decay of
-learning rate is exponential in nature. The rate at which the decay must happen can
+learning rate is exponential in nature. The rate at which the decay happens can
 be tuned using this param. The param is passed into method `exp_lr_scheduler(args..)`
 from fit.
 
@@ -161,5 +161,4 @@ during the iteration. When the loss is decreased by 0.5 % it is considered bette
 than its predecessor.
 
 `weight_decay` : This is the weight decay param that is passed into the optimizer.
-It will be passed into only `adam` and `SDG` optimizers. In other cases it will
-be ignored.
+It will be passed into only `adam` and `SDG` optimizers. In other cases it is ignored.
