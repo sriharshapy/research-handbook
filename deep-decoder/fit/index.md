@@ -109,4 +109,18 @@ adding noise to the input image in the case of denoising experiment. It contains
 data as the `img_noisy_np` which is the other output of `get_noisy_img(args...)`
 but with extra added dimension or `[]` wrapped around the data and also `required_grad=True`.
 
-`num_channels` :
+`num_channels` : This is the same param we pass into the decoder model `num_channels_up`.
+In fit method it is used to compute the shape of `net_input` which is initialized with zeros
+having shape of `[1,num_channels[0], width, height]`. `net_input` is computed only
+in the scenarios where it is not explicitly pass as an arg. In case of Denoising
+experiment is will not be passed.
+
+`img_clean_var` : This contains the data of the original image without any noise.
+The data is wrapped in a tensor with `required_grad=True` and an added extra
+dimension because it is wrapped with `[]`.
+
+`num_iter` : This hold the number of iterations the forward and backward passes
+occur during the execution of the fit model.
+
+`LR`: This the learning rate that is fed into the optimizer.
+ 
